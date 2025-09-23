@@ -1,0 +1,19 @@
+.PrimaryButton{
+    padding: 10px 30px;
+    margin: 0px;
+    border-radius: 50px;
+    background-color: #7eae25;
+    align-content: center;
+}
+.SecondaryButton{
+    padding: 0px 12px;
+    margin: 0px;
+    border-radius: 50px;
+    border: 3px solid;
+    border-color: #7eae25;
+    align-content: center;
+}
+
+.MarginRight{
+    margin-right: 3%;
+}

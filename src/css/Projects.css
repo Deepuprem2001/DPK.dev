@@ -1,0 +1,15 @@
+.ProjectSection{
+    padding: 3rem;
+    margin: 0 3rem;    
+}
+.ProjectHeader{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.ProjectList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

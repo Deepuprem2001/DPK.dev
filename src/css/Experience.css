@@ -1,0 +1,15 @@
+.ExperienceSection{
+    padding: 3rem;
+    margin: 0 3rem;
+}
+.CardHeader{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.CardSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

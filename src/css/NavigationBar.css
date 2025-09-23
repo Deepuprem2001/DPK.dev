@@ -1,0 +1,53 @@
+.TitleBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 3rem 5rem 0 5rem;
+    z-index: 1000; 
+    background-color: rgb(27 27 33) !important;
+}
+.TitleBarContent{
+    display: flex;
+    border-bottom: 3px solid #7eae25;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1rem;
+
+}
+.WebsiteTitle{
+    font-size: 2rem;
+    margin: 0px;
+    height: min-content;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+.GreenText{
+    margin: 0px;
+    font-size: 1rem;
+    color:#7eae25;
+}
+.NavigationButtons{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: min-content;
+}
+.NavLink{
+    margin: 0px 10px;
+    height: min-content;
+    padding: 5px;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.NavLink:hover{
+    transform: scale(1.2);
+    color: #7eae25;
+}

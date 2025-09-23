@@ -1,0 +1,27 @@
+.Label{
+    display: flex;
+    border: 3px solid #7eae25;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    justify-content: space-between;
+    margin: 0.2%;
+    align-items: center;
+}
+.Label:hover{
+  transform: translateY(-5px);
+}
+.SkillLogo{
+    display: flex;
+    margin: 0px 10px 0px 0px;
+    height: min-content;
+    font-size: 2rem;
+}
+.SkillContent{
+    margin: 0px;
+    font-size: 1rem;
+    height: min-content;
+    width: max-content;
+}

@@ -1,0 +1,23 @@
+:root {
+  font-family: Inter;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.WholePage{
+  width: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: -webkit-fill-available;
+  min-height: 100vh;
+  background-color: rgb(27 27 33) !important;
+  color: #fff !important;
+}
+
+.PrimaryColor{
+  color: #7eae25;
+}

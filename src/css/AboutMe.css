@@ -1,0 +1,17 @@
+.AboutMeSection{
+    display: flex;
+    padding: 3rem;
+    margin: 0 3rem;
+    justify-content: space-between;
+}
+.AboutMeContent{
+    margin: 0px;
+    font-size: 1rem;
+    text-align: center;
+}
+.AboutMeTitle{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}

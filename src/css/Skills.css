@@ -1,0 +1,28 @@
+.SkillsSection {
+    padding: 3rem;
+    margin: 0 3rem;
+    overflow: hidden;
+}
+.SkillsHeader {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.SkillsList {
+    display: flex;
+    width: max-content;
+    animation: scroll 50s linear infinite; 
+}
+.SkillsList:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,76 @@
+.MainSection{
+    display: flex;
+    padding: 3rem;
+    margin: 10rem 3rem 0 3rem;
+    justify-content: space-between;
+}
+.IntroductionContent{
+    font-size: 4rem;
+    margin: 0px;
+    height: min-content;
+    font-weight: bold;
+}
+.AutoTypingContent{
+    margin: 3% 0;
+    font-size: 2rem;
+    height: min-content;
+    font-weight: bold;
+}
+.PrimaryText{
+    color: #7eae25;
+}
+.IntroductionButtons{
+    display: flex;
+    margin: 2rem 0;
+}
+.IntroductionImageSection{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.ImageSection{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: #7eae25;
+    font-size: 12rem;
+}
+.ImagePlacement{
+    height: inherit;
+}
+
+.PrimaryButton, .SecondaryButton {
+    text-decoration: none;  
+    border-radius: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.PrimaryButton {
+    background: #7eae25;
+    color: white;
+}
+.PrimaryButton:hover {
+    background: #486217;
+}
+.SecondaryButton {
+    color: white;
+    font-size: 1.5rem;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: white;
+}
+.SecondaryButton:hover {
+    background: transparent;
+    color: #7eae25;
+    border-color: #7eae25;
+
+}
