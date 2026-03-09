@@ -11,7 +11,7 @@ function Projects(){
             <p className="ProjectHeader">Recent Projects</p>
             <div className="ProjectList">
                 <ProjectCards
-                    projectPicture= "../../public/KnowUrfoodMockup.png"
+                    projectPicture= "/KnowUrfoodMockup.png"
                     projectName="KnowUrFood"
                     projectDesc="I developed an Android Nutrition Tracking Application that leverages OCR and barcode scanning to make meal logging effortless. 
                     I built a layout-agnostic parser to extract structured nutrition data from unstructured text, 
@@ -20,10 +20,10 @@ function Projects(){
                     projectLink="https://github.com/Deepuprem2001/knowurfood"
                 />
                 <ProjectCards
-                    projectPicture=""
-                    projectName="Project Name"
-                    projectDesc="Project Desc" 
-                    projectLink="https://github.com/Deepuprem2001/knowurfood"
+                    projectPicture="/PortfolioMockup.png"
+                    projectName="Personal Portfolio"
+                    projectDesc="A personal developer portfolio built from scratch using React and Vite. Features smooth scroll animations, an infinite skills marquee, interactive 3D mouse-tracking, flip project cards, a timeline journey section, and a fully functional contact form powered by EmailJS. Fully responsive across all devices." 
+                    projectLink="https://github.com/Deepuprem2001/DPK.dev"
                 />
             </div>
         </div>
