@@ -78,3 +78,26 @@
     margin: 0;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .MyJourney {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    .ScrollProgression {
+        left: 10px;
+        transform: none;
+    }
+    .JourneyContent {
+        gap: 40px;
+    }
+    .YearCard {
+        width: 85%;
+        align-self: flex-end !important;
+        text-align: left !important;
+    }
+    .YearCard::before {
+        left: -40px !important;
+        right: auto !important;
+    }
+}

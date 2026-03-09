@@ -10,10 +10,10 @@ function ContactMe() {
 
         emailjs
             .sendForm(
-                "YOUR_SERVICE_ID",   
-                "YOUR_TEMPLATE_ID",  
+                "service_lgdkpcv",
+                "template_jtc0jja",
                 form.current,
-                "YOUR_PUBLIC_KEY"    
+                "G82SFpqTftXrqb_t1"
             )
             .then(
                 (result) => {

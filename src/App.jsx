@@ -16,7 +16,6 @@ function App() {
     <div>
       <NavigationBar />
       <section id='mainsection'><MainSection /></section>
-
       <ScrollAnimation direction='up'><section id="about"><AboutMe /></section></ScrollAnimation>
       <ScrollAnimation direction='up'><section id="experience"><Experience /></section></ScrollAnimation>
       <ScrollAnimation direction='up'><section id="skills"><Skills /></section></ScrollAnimation>

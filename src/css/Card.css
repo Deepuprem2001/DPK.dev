@@ -25,3 +25,8 @@
   color:whitesmoke;
 }
 
+@media (max-width: 768px) {
+    .Card {
+        width: 100%;
+    }
+}

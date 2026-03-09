@@ -21,3 +21,19 @@ body {
 .PrimaryColor{
   color: #7eae25;
 }
+
+section {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        font-size: 12px;
+    }
+}

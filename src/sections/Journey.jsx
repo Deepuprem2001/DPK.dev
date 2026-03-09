@@ -30,22 +30,27 @@ function Journey() {
       <div className="JourneySection">
         <div className="ScrollProgression"></div>
         <div className="JourneyContent">
+
           <div className="YearCard left">
             <h2>2025</h2>
-            <p>Launched my portfolio and worked on major React projects.</p>
+            <p>Graduated with Distinction in MSc Advanced Computer Science from the University of Liverpool. Launched my portfolio and continued building full-stack projects.</p>
           </div>
+
           <div className="YearCard right">
             <h2>2024</h2>
-            <p>Completed internship and started learning full-stack development.</p>
+            <p>Joined Buddi AI as a Software Engineer, delivering full-stack features for healthcare automation platforms using React, TypeScript, and Java. Improved frontend performance by 35%. Started MSc at University of Liverpool in Sept 2024.</p>
           </div>
+
           <div className="YearCard left">
             <h2>2023</h2>
-            <p>Started university and worked on multiple small projects.</p>
+            <p>Joined Laserbeam Solutions as a Front End Developer, building business-critical web apps with React, JavaScript, and CSS. Graduated from SRM University with a BTech in Electronics & Computer Engineering with First Class Distinction.</p>
           </div>
+
           <div className="YearCard right">
-            <h2>2022</h2>
-            <p>Got into coding and built my first mini-projects.</p>
+            <h2>2019</h2>
+            <p>Began BTech in Electronics & Computer Engineering at SRM University, India. Started exploring programming and laid the foundation in computer science fundamentals.</p>
           </div>
+
         </div>
       </div>
     </div>

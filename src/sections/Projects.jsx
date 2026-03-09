@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Projects.css"
 import ProjectCards from "../component/ProjectCards";
 
+
 function Projects(){
 
     return(
@@ -10,7 +11,7 @@ function Projects(){
             <p className="ProjectHeader">Recent Projects</p>
             <div className="ProjectList">
                 <ProjectCards
-                    projectPicture=""
+                    projectPicture= "../../public/KnowUrfoodMockup.png"
                     projectName="KnowUrFood"
                     projectDesc="I developed an Android Nutrition Tracking Application that leverages OCR and barcode scanning to make meal logging effortless. 
                     I built a layout-agnostic parser to extract structured nutrition data from unstructured text, 

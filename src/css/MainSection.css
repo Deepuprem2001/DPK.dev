@@ -40,7 +40,6 @@
 .ImagePlacement{
     height: inherit;
 }
-
 .PrimaryButton, .SecondaryButton {
     text-decoration: none;  
     border-radius: 1rem;
@@ -51,7 +50,6 @@
     transition: all 0.3s ease;
     cursor: pointer;
 }
-
 .PrimaryButton {
     background: #7eae25;
     color: white;
@@ -72,5 +70,40 @@
     background: transparent;
     color: #7eae25;
     border-color: #7eae25;
+}
 
+@media (max-width: 768px) {
+    .MainSection {
+        flex-direction: column;
+        margin: 7rem 1rem 0 1rem;
+        padding: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+    .IntroductionContent {
+        font-size: 2.5rem;
+    }
+    .AutoTypingContent {
+        font-size: 1.3rem;
+    }
+    .IntroductionButtons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0rem;
+    }
+    .IntroductionImageSection {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .ImageSection {
+        font-size: 6rem;
+    }
+
+    .PrimaryButton {
+        padding: 10px 15px !important;
+        margin: 0px;
+        border-radius: 50px;
+        background-color: #7eae25;
+        align-content: center;
+    }
 }
