@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/ProjectCards.css"
 
-const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink}) => {
+const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink, projectLive}) => {
 
     const [flipped, setFlipped] = useState(false);
     const handleFlip = () => {
@@ -30,6 +30,7 @@ const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink}) =
                 <div className="ProjectCardBack">
                     <h3>{projectName}</h3>
                     <p>{projectDesc}</p>
+                    <div className="ButtonSection">
                     {projectLink && (
                             <a
                                 href={projectLink}
@@ -38,9 +39,21 @@ const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink}) =
                                 className="ProjectLink"
                                 onClick={(e) => e.stopPropagation()} 
                             >
-                                View Project
+                                View Code Base
                             </a>
                         )}
+                    {projectLive && (
+                        <a 
+                            href={projectLive}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ProjectLive"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            View Project
+                        </a>
+                    )}
+                    </div>
                 </div>
             </div>
         </div>

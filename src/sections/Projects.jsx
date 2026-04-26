@@ -18,12 +18,14 @@ function Projects(){
                     integrated real-time charts, and ensured user-specific data synchronization. The app emphasizes a responsive, 
                     mobile-first design with optimized PWA performance." 
                     projectLink="https://github.com/Deepuprem2001/knowurfood"
+                    projectLive="https://deepuprem2001.github.io/knowurfood/"
                 />
                 <ProjectCards
-                    projectPicture="/PortfolioMockup.png"
-                    projectName="Personal Portfolio"
-                    projectDesc="A personal developer portfolio built from scratch using React and Vite. Features smooth scroll animations, an infinite skills marquee, interactive 3D mouse-tracking, flip project cards, a timeline journey section, and a fully functional contact form powered by EmailJS. Fully responsive across all devices." 
-                    projectLink="https://github.com/Deepuprem2001/DPK.dev"
+                    projectPicture="/BudgetOSMockup.png"
+                    projectName="Budget OS"
+                    projectDesc="A full-stack personal finance platform built with React, Supabase and Tailwind CSS. Track spending, manage budgets, monitor debts, set financial goals and get personalised smart insights — all in one place." 
+                    projectLink="https://github.com/Deepuprem2001/budget-os"
+                    projectLive="https://budget-os.vercel.app/"
                 />
             </div>
         </div>

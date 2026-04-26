@@ -75,6 +75,17 @@
 .ProjectLink:hover {
     background: #486217;
 }
+.ProjectLive {
+    padding: 0.5rem 1rem;
+    background: #7eae25;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.ProjectLive:hover {
+    background: #486217;
+}
 
 @media (max-width: 768px) {
     .ProjectCard {
