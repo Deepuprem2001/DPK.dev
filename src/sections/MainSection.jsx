@@ -44,10 +44,6 @@ function MainSection() {
                         delaySpeed={1500}
                     />
                 </p>
-                <p className="HeroSubLine">
-                    <span className="OpenToWorkBadge">Open to work</span>
-                    Based in Liverpool, UK. Open to full-stack, frontend and AI automation roles across the UK.
-                </p>
 
                 <div className="IntroductionButtons">
                     <a href="/DeepanPrashanthCV.pdf" download="DeepanPrashanthCV.pdf" className="PrimaryButton MarginRight">
