@@ -35,14 +35,18 @@ function MainSection() {
                 <p className="IntroductionContent PrimaryText">Deepan Prashanth</p>
                 <p className="AutoTypingContent">
                     <Typewriter
-                        words={['Full-stack Web Developer','UI/UX Designer','Software Engineer']}
+                        words={['Software Engineer', 'Full-Stack Developer', 'AI Automation Developer']}
                         loop={0}
                         cursor
                         cursorStyle='|'
                         typeSpeed={75}
                         deleteSpeed={50}
-                        delaySpeed={1000}
+                        delaySpeed={1500}
                     />
+                </p>
+                <p className="HeroSubLine">
+                    <span className="OpenToWorkBadge">Open to work</span>
+                    Based in Liverpool, UK. Open to full-stack, frontend and AI automation roles across the UK.
                 </p>
 
                 <div className="IntroductionButtons">
