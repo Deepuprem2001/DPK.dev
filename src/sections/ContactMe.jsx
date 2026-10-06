@@ -17,11 +17,11 @@ function ContactMe() {
             )
             .then(
                 (result) => {
-                    alert("✅ Message sent successfully!");
+                    alert("Message sent successfully.");
                     form.current.reset();
                 },
                 (error) => {
-                    alert("❌ Failed to send message, please try again.");
+                    alert("Failed to send message, please try again.");
                     console.error(error.text);
                 }
             );
@@ -32,8 +32,12 @@ function ContactMe() {
             <div className="ContactMeHeader">Let's Connect</div>
 
             <p className="ContactMeIntro">
-                I'd love to hear from you! Whether it's a project, job opportunity, or just a chat —
+                I'd love to hear from you. Whether it's a project, job opportunity, or just a chat,
                 feel free to reach out.
+            </p>
+            <p className="ContactMeAvailability">
+                I'm open to work in the UK, available immediately, and happy to work on-site, hybrid or remote.
+                I hold a Graduate Visa valid until January 2028.
             </p>
 
             <div className="ContactMeSection">
