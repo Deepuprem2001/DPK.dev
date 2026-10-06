@@ -18,6 +18,12 @@
 .CardTitle {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.CardSubtitle {
+  font-size: 0.9rem;
+  color: #7eae25;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 .CardContent {
