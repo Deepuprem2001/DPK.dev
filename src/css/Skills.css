@@ -12,7 +12,10 @@
 .SkillsList {
     display: flex;
     width: max-content;
-    animation: scroll 50s linear infinite; 
+    animation: scroll 50s linear infinite;
+}
+.SkillsDuplicateSet {
+    display: flex;
 }
 .SkillsList:hover {
     animation-play-state: paused;
