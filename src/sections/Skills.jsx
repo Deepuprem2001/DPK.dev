@@ -59,19 +59,27 @@ function Skills(){
 
     const skills = skillGroups.flatMap((group) => group.skills);
 
+    // Repeat the skill list enough times that a single group is comfortably
+    // wider than large viewports (up to ~1920px), so the loop never shows a gap.
+    const MIN_ITEMS_PER_GROUP = 32;
+    const repeatCount = Math.max(1, Math.ceil(MIN_ITEMS_PER_GROUP / skills.length));
+    const groupItems = Array.from({ length: repeatCount }, () => skills).flat();
+
+    const renderGroup = (groupKey, hidden) => (
+        <div className="SkillsGroup" aria-hidden={hidden || undefined}>
+            {groupItems.map((skill, index) => (
+                <Label key={`${groupKey}-${index}`} logo={skill.logo} title={skill.title} />
+            ))}
+        </div>
+    );
+
     return(
 
         <div className="SkillsSection">
             <p className="SkillsHeader">Skills</p>
-            <div className="SkillsList">
-                {skills.map((skill, index) => (
-                    <Label key={index} logo={skill.logo} title={skill.title} />
-                ))}
-                <div aria-hidden="true" className="SkillsDuplicateSet">
-                    {skills.map((skill, index) => (
-                        <Label key={`dup-${index}`} logo={skill.logo} title={skill.title} />
-                    ))}
-                </div>
+            <div className="SkillsTrack">
+                {renderGroup("a", false)}
+                {renderGroup("b", true)}
             </div>
         </div>
 
