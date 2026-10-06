@@ -6,33 +6,44 @@
   padding: 1.5rem;
   transition: transform 0.2s;
   display: flex;
-  text-align: center;
-  align-items: center;
-  width: 49%;
   border: 1px solid rgb(255 255 255/.1);
 }
 .Card:hover {
   transform: translateY(-5px);
   border: 2px solid #486217;
 }
-.CardTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+.CardBody {
+  text-align: left;
+  width: 100%;
 }
-.CardSubtitle {
-  font-size: 0.9rem;
+.CardTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+.CardCompany {
+  font-size: 1rem;
+  color: whitesmoke;
+  margin-bottom: 0.8rem;
+}
+.CardDateChip {
+  display: inline-block;
+  background: rgba(126, 174, 37, 0.15);
   color: #7eae25;
+  border: 1px solid #7eae25;
+  border-radius: 2rem;
+  padding: 0.25rem 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.CardContent {
-  font-size: 1rem;
-  color:whitesmoke;
+.CardList {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: whitesmoke;
 }
-
-@media (max-width: 768px) {
-    .Card {
-        width: 100%;
-    }
+.CardList li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
