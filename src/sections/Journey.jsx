@@ -1,19 +1,104 @@
 import React, { useEffect } from "react";
 import "../css/Journey.css";
 
+const journeyData = [
+  {
+    year: "2026",
+    milestones: [
+      {
+        title: "Completed internship at Tenacium DC",
+        month: "May to Aug",
+        description: "Software engineer building a full-stack app, access control with Microsoft SSO, AWS deployment.",
+      },
+      {
+        title: "Completed freelance project for Food Pantry",
+        month: "Apr",
+        description: "E-commerce and inventory system with AI agents.",
+      },
+      {
+        title: "Shipped BudgetOS",
+        month: "Jan to Mar",
+        description: "Full-stack finance platform, live on Vercel.",
+      },
+    ],
+  },
+  {
+    year: "2025",
+    milestones: [
+      {
+        title: "Started freelance project for Food Pantry",
+        month: "Nov",
+        description: "Began building a full-stack e-commerce and inventory system.",
+      },
+      {
+        title: "Graduated MSc Advanced Computer Science with Distinction",
+        month: "Sep",
+        description: "University of Liverpool.",
+      },
+      {
+        title: "Built KnowUrFood",
+        month: "Jun to Sep",
+        description: "MSc dissertation app with an AI agent.",
+      },
+    ],
+  },
+  {
+    year: "2024",
+    milestones: [
+      {
+        title: "Started MSc at the University of Liverpool",
+        month: "Sep",
+        description: "Began studying Advanced Computer Science.",
+      },
+      {
+        title: "Joined Buddi AI as Software Development Engineer",
+        month: "Feb",
+        description: "35% frontend performance gain, WCAG 2.1 AA accessibility.",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    milestones: [
+      {
+        title: "Graduated BTech with First Class Distinction",
+        description: "SRM University.",
+      },
+      {
+        title: "Joined LaserBeam Software as Frontend Developer",
+        month: "Mar",
+        description: "Began building business-critical web apps.",
+      },
+    ],
+  },
+  {
+    year: "2019",
+    milestones: [
+      {
+        title: "Began BTech in Electronics and Computer Engineering",
+        description: "SRM University, India.",
+      },
+    ],
+  },
+];
+
+const flatMilestones = journeyData.flatMap((group) =>
+  group.milestones.map((milestone) => ({ ...milestone, year: group.year }))
+);
+
 function Journey() {
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".YearCard");
-    
+    const cards = document.querySelectorAll(".MilestoneCard");
+
     const revealSection = () => {
       const triggerBottom = window.innerHeight * 0.8;
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if(sectionTop < triggerBottom){
-          section.classList.add("active");
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.classList.add("active");
         } else {
-          section.classList.remove("active");
+          card.classList.remove("active");
         }
       });
     }
@@ -24,6 +109,8 @@ function Journey() {
     return () => window.removeEventListener("scroll", revealSection);
   }, []);
 
+  let lastYear = null;
+
   return (
     <div className="MyJourney">
       <div className="JourneyHeader">My Journey</div>
@@ -31,30 +118,26 @@ function Journey() {
         <div className="ScrollProgression"></div>
         <div className="JourneyContent">
 
-          <div className="YearCard left">
-            <h2>2026</h2>
-            <p>Joined Tenacium DC as a Software Engineer intern (May to Aug 2026), building a full-stack Next.js and FastAPI application, a role-based access control system with Microsoft SSO, and helping run a live production CRM on AWS. Took on freelance full-stack and AI automation work for Food Pantry (Nov 2025 to Apr 2026), delivering an e-commerce and inventory platform and automating business processes with AI agents.</p>
-          </div>
+          {flatMilestones.map((milestone, index) => {
+            const showYear = milestone.year !== lastYear;
+            lastYear = milestone.year;
+            const side = index % 2 === 0 ? "left" : "right";
 
-          <div className="YearCard right">
-            <h2>2025</h2>
-            <p>Graduated with Distinction in MSc Advanced Computer Science from the University of Liverpool. Launched my portfolio and continued building full-stack projects.</p>
-          </div>
-
-          <div className="YearCard left">
-            <h2>2024</h2>
-            <p>Joined Buddi AI as a Software Development Engineer, delivering full-stack features for a healthcare automation platform using React, TypeScript, and Java. Improved frontend performance by 35%. Started MSc at University of Liverpool in Sept 2024.</p>
-          </div>
-
-          <div className="YearCard right">
-            <h2>2023</h2>
-            <p>Joined LaserBeam Software as a Frontend Developer, building business-critical web apps with React, JavaScript, and CSS. Graduated from SRM University with a BTech in Electronics & Computer Engineering with First Class Distinction.</p>
-          </div>
-
-          <div className="YearCard left">
-            <h2>2019</h2>
-            <p>Began BTech in Electronics & Computer Engineering at SRM University, India. Started exploring programming and laid the foundation in computer science fundamentals.</p>
-          </div>
+            return (
+              <React.Fragment key={`${milestone.year}-${index}`}>
+                {showYear && (
+                  <div className="YearMarker">
+                    <span>{milestone.year}</span>
+                  </div>
+                )}
+                <div className={`MilestoneCard ${side}`}>
+                  <h3>{milestone.title}</h3>
+                  {milestone.month && <span className="MilestoneMonth">{milestone.month}</span>}
+                  <p>{milestone.description}</p>
+                </div>
+              </React.Fragment>
+            );
+          })}
 
         </div>
       </div>
