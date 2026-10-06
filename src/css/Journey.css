@@ -25,12 +25,27 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 80px;
+    gap: 40px;
 }
-.YearCard {
+.YearMarker {
+    position: relative;
+    align-self: center;
+    z-index: 2;
+}
+.YearMarker span {
+    display: inline-block;
+    background-color: #7eae25;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.4rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+.MilestoneCard {
     position: relative;
     width: 45%;
-    padding: 1.5rem;
+    padding: 1.2rem 1.5rem;
     border-radius: 1rem;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -38,45 +53,54 @@
     transform: translateY(50px);
     transition: all 0.6s ease-out;
 }
-.YearCard:hover{
+.MilestoneCard:hover{
     border: 2px solid #486217;
 }
-.YearCard.active {
+.MilestoneCard.active {
     opacity: 1;
     transform: translateY(0);
 }
-.YearCard.left {
+.MilestoneCard.left {
     align-self: flex-start;
     text-align: right;
 }
-.YearCard.right {
+.MilestoneCard.right {
     align-self: flex-end;
     text-align: left;
 }
-.YearCard::before {
+.MilestoneCard::before {
     content: "";
     position: absolute;
     top: 20px;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background-color: #7eae25;
     border-radius: 50%;
     border: 4px solid white;
     z-index: 1;
 }
-.YearCard.left::before {
+.MilestoneCard.left::before {
     right: -50px;
 }
-.YearCard.right::before {
+.MilestoneCard.right::before {
     left: -50px;
 }
-.YearCard h2 {
-    margin: 0 0 10px 0;
+.MilestoneCard h3 {
+    margin: 0 0 0.4rem 0;
     color: #7eae25;
+    font-size: 1.1rem;
 }
-.YearCard p {
+.MilestoneMonth {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #7eae25;
+    margin-bottom: 0.4rem;
+}
+.MilestoneCard p {
     margin: 0;
     color: #fff;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
@@ -89,14 +113,18 @@
         transform: none;
     }
     .JourneyContent {
-        gap: 40px;
+        gap: 24px;
     }
-    .YearCard {
+    .YearMarker {
+        align-self: flex-start;
+        margin-left: -10px;
+    }
+    .MilestoneCard {
         width: 85%;
         align-self: flex-end !important;
         text-align: left !important;
     }
-    .YearCard::before {
+    .MilestoneCard::before {
         left: -40px !important;
         right: auto !important;
     }

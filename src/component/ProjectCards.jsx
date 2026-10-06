@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../css/ProjectCards.css"
 
-const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink, projectLive}) => {
+const ProjectCards = ({projectPicture, projectName, problem, role, features, stack, outcome, projectLink, projectLive}) => {
 
     const [flipped, setFlipped] = useState(false);
     const handleFlip = () => {
         setFlipped(!flipped);
     }
-    
+
     return(
 
         <div className="ProjectCard" onClick={handleFlip}>
@@ -18,7 +18,7 @@ const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink, pr
                             <img
                                 className="ProjectImage"
                                 src={projectPicture}
-                                alt={projectName}
+                                alt={`${projectName} project screenshot`}
                             />
                         )}
                     </div>
@@ -29,7 +29,13 @@ const ProjectCards = ({projectPicture, projectName, projectDesc, projectLink, pr
 
                 <div className="ProjectCardBack">
                     <h3>{projectName}</h3>
-                    <p>{projectDesc}</p>
+                    <div className="ProjectCaseStudy">
+                        {problem && <p><strong>Problem:</strong> {problem}</p>}
+                        {role && <p><strong>Role:</strong> {role}</p>}
+                        {features && <p><strong>Key features:</strong> {features}</p>}
+                        {stack && <p><strong>Stack:</strong> {stack}</p>}
+                        {outcome && <p><strong>Outcome:</strong> {outcome}</p>}
+                    </div>
                     <div className="ButtonSection">
                     {projectLink && (
                             <a

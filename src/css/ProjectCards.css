@@ -36,8 +36,22 @@
 }
 .ProjectCardBack {
     transform: rotateY(180deg);
-    text-align: center;
+    text-align: left;
     border: 2px solid #486217;
+    overflow-y: auto;
+    justify-content: flex-start;
+}
+.ProjectCaseStudy {
+    width: 100%;
+    overflow-y: auto;
+}
+.ProjectCaseStudy p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+.ProjectCaseStudy strong {
+    color: #7eae25;
 }
 .ProjectPic {
     height: 100%;

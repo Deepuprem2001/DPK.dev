@@ -9,12 +9,17 @@
     font-weight: bold;
     margin-bottom: 2rem;
 }
-.SkillsList {
+.SkillsTrack {
     display: flex;
     width: max-content;
-    animation: scroll 50s linear infinite; 
+    animation: scroll 50s linear infinite;
 }
-.SkillsList:hover {
+.SkillsGroup {
+    display: flex;
+    flex-shrink: 0;
+    padding-right: 0.4%;
+}
+.SkillsTrack:hover {
     animation-play-state: paused;
 }
 
@@ -23,6 +28,12 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .SkillsTrack {
+        animation: none;
     }
 }
